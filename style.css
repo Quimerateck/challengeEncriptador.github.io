@@ -1,0 +1,297 @@
+header{
+    margin: 2em;
+}
+
+body{
+    background-color: #e5e5e5;
+}
+
+main{
+    height: 100%;
+}
+
+.input{
+    background-color: transparent;
+    position: absolute;
+    width: 45%;
+    height: 50%;
+    left: 15%;
+    top: 20%;
+    font-size: 3em;
+    line-height: 150%;
+    color: #0A3871;
+    border: none;
+}
+
+.advertencia{
+    display: flex;
+    position: absolute;
+    left: 14%;
+    top: 80%;
+}
+
+.contenedor-botones{
+    display: flex;
+    position: absolute;
+    left: 14%;
+    top: 85%;
+    width: 50%;
+    min-height: fit-content;
+    gap: 24px;
+}
+
+.contenedor-botones button{
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    font-size: 18px;
+}
+
+.encriptar{
+    background-color: #0A3871;
+    border: none;
+    color: #e5e5e5;
+    transition: 500ms;
+}
+
+.encriptar:hover{
+    background-color: #0f59b2;
+}
+
+.encriptar:active{
+    scale: 97%;
+    transition: 50ms;
+}
+
+.desencriptar{
+    background-color: #e5e5e5;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    transition: 500ms;
+}
+
+.desencriptar:hover{
+    background-color: #b8b8b8;
+}
+
+.desencriptar:active{
+    scale: 97%;
+    transition: 50ms;
+}
+
+.rectangulo{
+    position: absolute;
+    width: 30%;
+    min-height: 90%;
+    max-height: fit-content;
+    top: 5%;
+    right: 2%;
+    border-radius: 32px;
+    background: #ffffff;
+    box-shadow: 0px 24px 32px -8px #00000070;
+
+}
+
+.rectangulo img{
+    position: relative;
+    display: block;
+    margin: 30% auto;
+    width: 80%;
+    height: auto;
+}
+
+.mensaje-info{
+    display: none;
+}
+
+.mensaje-info h2 {
+    display: none;
+}
+
+.mensaje-info p{
+    display: none;
+}
+
+.texto-encriptado{
+    font-size: 2em;
+    display: none;
+    width: 90%;
+    max-width: 90%;
+    min-width: 90%;
+    height: 100%;
+    max-height: 80%;
+    margin: 20px auto;
+    border: none;
+}
+
+.copiar{
+    display: none;
+    margin: 10% auto;
+    width: 90%;
+    height: 67px;
+    font-size: 18px;
+    border: 1px solid #000000;
+    border-radius: 24px;
+    background-color: #ffffff;
+    color: #000000;
+    transition: 500ms;
+}
+
+.copiar:hover{
+    background-color: #e5e5e5;
+}
+
+.copiar:active{
+    scale: 97%;
+    transition: 50ms;
+}
+
+@media only screen and (max-width: 810px) {
+
+    header{
+        margin: 10% 0 5% 0;
+    }
+    
+    .input{
+        left: 5%;
+        width: 90%;
+    }
+
+    .advertencia{
+        top: 73%;
+        left: 5%;
+    }
+    
+    .contenedor-botones{
+        left: 0;
+        top: 75%;
+        margin: 0 auto;
+        padding: 0 5%;
+        width: 90%;
+        gap: auto;
+    }
+    .contenedor-botones button{
+        width: 50%;
+    }
+
+    .rectangulo{
+        display: inline-block;
+        position: absolute;
+        top: 80%;
+        left: 0;
+        width: 90%;
+        min-height: 1em;
+        height: fit-content;
+        margin: 5%;
+    }
+    .rectangulo img{
+        display: none;
+    }
+    .texto-encriptado{
+        height: min-content;
+    }
+    .mensaje-info{
+        display: block;
+        margin: 5% auto;
+    }
+    .mensaje-info h2{
+        display: inherit;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2em;
+        font-weight: bold;
+    }
+    .mensaje-info p{
+        display: inherit;
+        text-align: center;
+        margin-top: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+    }
+
+    .texto-encriptado{
+        display: none;
+    }
+    
+    .copiar {
+        margin: 1em auto;
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 428px){
+    header{
+        margin: 10% 0 5% 0;
+    }
+
+    .input{
+        left: 2%;
+        font-size: 2em;
+        width: 94%;
+        height: 40%;
+    }
+
+    .advertencia{
+        top: 62%;
+        left: 5%;
+    }
+    
+    .contenedor-botones{
+        display: inline-grid;
+        left: 0;
+        top: 65%;
+        margin: 0;
+        width: 90%;
+        gap: 5%;
+    }
+    .contenedor-botones button{
+        margin: 0;
+        width: 100%;
+    }
+
+    .rectangulo{
+        display: block;
+        position: absolute;
+        top: 84%;
+        bottom: 4%;
+        left: 0;
+        width: 90%;
+        padding: 2px;
+        min-height: 1em;
+        height: fit-content;
+        margin: 0 5% 5%;
+    }
+    .rectangulo img{
+        display: none;
+    }
+    .texto-encriptado{
+        height: min-content;
+    }
+    .mensaje-info{
+        display: block;
+        margin: 5% auto;
+    }
+    .mensaje-info h2{
+        display: inherit;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    .mensaje-info p{
+        display: inherit;
+        text-align: center;
+        margin-top: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: .75em;
+    }
+
+    .texto-encriptado{
+        display: none;
+    }
+    
+    .copiar {
+        margin: 2em auto 1em;
+        width: 80%;
+    }
+}
