@@ -6,6 +6,9 @@ var btnDesencriptar = document.getElementById("btn-desencriptar");
 var btnEncriptar = document.getElementById("btn-encriptar");
 var btnCopiar = document.getElementById("btn-copiar");
 
+var codigo = {"a":"ai","e":"enter","i":"imes","o":"ober","u":"ufat"};
+var letras = ["a","e","i","o","u"];
+
 mensaje.focus();
 
 //funciones
@@ -29,82 +32,25 @@ function ocultarImg(){
 function encriptar(){
     var nuevotexto = "";
     var texto = mensaje.value;
-    for (index = 0; index <= texto.length -1 ; index++){
-        if (texto[index] == "a"){
-            nuevotexto += "ai";
+    for (let i = 0; i < texto.length; i++) {
+        if (letras.includes(texto[i])){
+            var letra = texto[i];
+            nuevotexto += texto[i].replace(letra, codigo[letra]);
+        }else{
+            nuevotexto += texto[i];
         }
-        else if (texto[index] == "e"){
-            nuevotexto += "enter";
-        }
-        else if (texto[index] == "i"){
-            nuevotexto += "imes";
-        }
-        else if (texto[index] == "o"){
-            nuevotexto += "ober";
-        }
-        else if (texto[index] == "u"){
-            nuevotexto += "ufat";
-        }
-        else{
-            nuevotexto += texto[index];
-        }
+        
     }
-    log(nuevotexto);
     mensajeEncriptado.value = nuevotexto;
 }
 
-/*function comprobarEncriptado(){
-    texto = mensaje.value;
-    encripciones = ["ai","enter","imes","ober","ufat"]
-    palabra = "";
-    for (var index = 0; index <= texto.length; index++){
-        if (texto[index] != " "){
-            palabra += texto[index]; 
-        }
-        else if ((texto[index] == " ") && (palabra in encripciones) ){
-            break;
-        }
-        else if ((texto[index] == " ") && !(palabra in encripciones) ){
-            alert("El mensaje no esta encriptado");
-            break;
-        }
-        else{
-            continue;
-        }
-    }
-} */
-
 function desencriptar(){
-    var nuevotexto = "";
-    var texto = mensaje.value;
-    for (index = 0; index <= texto.length -1 ; index++){
-        if (texto[index] == "a"){
-            nuevotexto += "a";
-            index += 1;
-        }
-        else if (texto[index] == "e"){
-            nuevotexto += "e";
-            index += 4;
-        }
-        else if (texto[index] == "i"){
-            nuevotexto += "i";
-            index += 3;
-        }
-        else if (texto[index] == "o"){
-            nuevotexto += "o";
-            index += 3;
-        }
-        else if (texto[index] == "u"){
-            nuevotexto += "u";
-            index += 3;
-        }
-        else{
-            nuevotexto += texto[index];
-        }
-    }
-    log(nuevotexto);
-    mensajeEncriptado.value = "";
-    mensajeEncriptado.value = nuevotexto;
+    var texto = "";
+    texto = mensaje.value;
+    letras.forEach(letra => {
+        texto = texto.replaceAll(codigo[letra], letra);
+    });
+    mensajeEncriptado.value = texto;
 }
 
 function funcionesEncriptar(){
@@ -113,7 +59,7 @@ function funcionesEncriptar(){
 }
 
 function funcionesDesencriptar(){
-    ocultarImg()
+    ocultarImg();
     desencriptar();
 }
 
@@ -121,12 +67,11 @@ function copiarTexto(){
 
     var texto = mensajeEncriptado;
     texto.select();
-    texto.setSelectionRange(0, 99999);
+    texto.setSelectionRange(0, 99999); //para celulares
     navigator.clipboard.writeText(texto.value);
 }
 
 //Botones
-
 btnEncriptar.onclick = funcionesEncriptar;
 btnDesencriptar.onclick = funcionesDesencriptar;
 btnCopiar.onclick = copiarTexto;

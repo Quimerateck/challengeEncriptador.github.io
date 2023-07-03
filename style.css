@@ -127,18 +127,17 @@ main{
 .texto-encriptado{
     font-size: 2em;
     display: none;
-    width: 90%;
-    max-width: 90%;
-    min-width: 90%;
+    width: 80%;
     height: 100%;
+    resize: none;
     max-height: 80%;
-    margin: 20px auto;
+    margin: 24px auto;
     border: none;
 }
 
 .copiar{
     display: none;
-    margin: 10% auto;
+    margin: 8% auto;
     width: 90%;
     height: 67px;
     font-size: 18px;
@@ -161,7 +160,7 @@ main{
 @media only screen and (max-width: 810px) {
 
     header{
-        margin: 10% 0 5% 0;
+        margin: 6% 0 5% 0;
     }
     
     .input{
@@ -176,7 +175,7 @@ main{
     
     .contenedor-botones{
         left: 0;
-        top: 75%;
+        top: 77%;
         margin: 0 auto;
         padding: 0 5%;
         width: 90%;
@@ -189,7 +188,7 @@ main{
     .rectangulo{
         display: inline-block;
         position: absolute;
-        top: 83%;
+        top: 85%;
         left: 0;
         width: 90%;
         min-height: 1em;

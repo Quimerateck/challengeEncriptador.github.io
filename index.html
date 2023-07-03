@@ -19,23 +19,32 @@
         </header>
 
         <main>
-            <textarea id="texto-input" cols="30" rows="10" class="input" style="resize:none;">Ingrese el texto aquí</textarea>
-            <p class="advertencia"><img src="images/bi_exclamation-circle-fill-1.png">Solo letras minusculas y sin acentos</p>
+            <section class="bloque-principal">
+                
+                <textarea id="texto-input" cols="30" rows="10" class="input" style="resize:none;">Ingrese el texto aquí</textarea>
+                <p class="advertencia"><img src="images/bi_exclamation-circle-fill-1.png">Solo letras minusculas y sin acentos</p>
+                <div class="contenedor-botones">
 
-            <div class="contenedor-botones">
-                <button class="encriptar" id="btn-encriptar">Encriptar</button>
-                <button class="desencriptar" id="btn-desencriptar">Desencriptar</button>
-            </div>
+                    <button class="encriptar" id="btn-encriptar">Encriptar</button>
+                    <button class="desencriptar" id="btn-desencriptar">Desencriptar</button>
 
-            <div class="rectangulo">
-                <img id="imagen-rectangulo" src="images/Muñeco.png">
-                <div id="mensaje-rectangulo" class="mensaje-info">
-                    <h2 id="h2-rectangulo">Ningun mensaje fue encontrado</h2>
-                    <p id="p-rectangulo">Ingresa el texto que deseas encriptar o desencriptar.</p>
                 </div>
-                <textarea id="mensaje-encriptado" class="texto-encriptado" cols="15" rows="10"></textarea>
-                <button class="copiar" id="btn-copiar">Copiar</button>
-            </div>
+
+            </section>
+
+            <section class="rectangulo">
+
+                    <img id="imagen-rectangulo" src="images/Muñeco.png">
+                    <div id="mensaje-rectangulo" class="mensaje-info">
+
+                        <h2 id="h2-rectangulo">Ningun mensaje fue encontrado</h2>
+                        <p id="p-rectangulo">Ingresa el texto que deseas encriptar o desencriptar.</p>
+
+                    </div>
+                    <textarea id="mensaje-encriptado" class="texto-encriptado" cols="15" rows="10"></textarea>
+                    <button class="copiar" id="btn-copiar">Copiar</button>
+
+            </section>
 
         </main>
 
